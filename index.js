@@ -1,12 +1,14 @@
 for (var i=0;i<document.querySelectorAll(".drum").length;i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click",getClicked);
+    document.querySelectorAll(".drum")[i].addEventListener("click",function(){
+            sound(this.innerHTML);
+    });
     
 }
 document.addEventListener("keydown",function(event){
-    getClicked(event.key);
+    sound(event.key);
 });
 
-function getClicked(a=this.innerHTML){
+function sound(a){
     
     
     switch (a){
